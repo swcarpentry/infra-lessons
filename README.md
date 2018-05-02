@@ -6,7 +6,7 @@ A collection of scripts to help maintain the infrastructure of the lessons.
 
 Visit https://github.com/settings/tokens to create a personal access token.
 After you create your token,
-copy it and save it in `access_token` like
+copy it and save it into the file `access_token` like
 
 ~~~
 ACCESS_TOKEN=****************************************
