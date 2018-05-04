@@ -18,20 +18,10 @@ git fetch --all
 
 for repo in $LESSONS_REPOS
 do
-    # Move to upstream so we can use the last commit as base
-    git checkout upstream-${repo}/gh-pages
-    # Create a new branch
-    git branch -f ${repo}
-    # We don't want to handle with headless state
-    git checkout ${repo}
-    # Merge
-    #
-    # XXX: Conflicts can happen here. :-(
-    git merge upstream-${STYLES_REPO}/gh-pages -m "Update style"
-    # Push changes to GitHub
-    git push -f ${repo} ${repo}:gh-pages
-    # Create the pull request
-    #
+    # Push styles head to our fork of that repo
+    git push -f ${repo} upstream-${STYLES_REPO}/gh-pages:gh-pages
+
+    # Open a pull request
     # XXX: Be careful with your access_token
     curl "https://api.github.com/repos/swcarpentry/${repo}/pulls?access_token=${ACCESS_TOKEN}" --data '{"title":"Update style to v9.1.1", "body":"A few changes on style.", "base":"gh-pages", "head":"rgaiacs:gh-pages"}'
 done
