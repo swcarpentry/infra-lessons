@@ -1,7 +1,6 @@
 STYLES_REPO="styles"
 
 SWC_LESSONS_REPOS="git-novice
-git-novice-es
 hg-novice
 hpc-novice
 instructor-training
@@ -10,11 +9,10 @@ matlab-novice-inflammation
 python-novice-gapminder
 python-novice-inflammation
 r-novice-gapminder
-r-novice-gapminder-es
 r-novice-inflammation
 shell-novice
-shell-novice-es
-sql-novice-survey"
+sql-novice-survey
+styles-es"
 
 DC_LESSONS_REPOS="ecology-workshop
 openrefine-ecology-lesson
